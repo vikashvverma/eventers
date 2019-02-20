@@ -1,5 +1,6 @@
 profile.out
 coverage.txt
 cmd/api/config/files/config.dev.yaml
+vendor
 
 .idea
