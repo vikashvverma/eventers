@@ -7,7 +7,7 @@ import (
 )
 
 func TestChangePassword(t *testing.T) {
-	user := &gorsk.User{
+	user := &eventers.User{
 		FirstName: "TestGuy",
 	}
 
@@ -25,7 +25,7 @@ func TestChangePassword(t *testing.T) {
 }
 
 func TestUpdateLastLogin(t *testing.T) {
-	user := &gorsk.User{
+	user := &eventers.User{
 		FirstName: "TestGuy",
 	}
 

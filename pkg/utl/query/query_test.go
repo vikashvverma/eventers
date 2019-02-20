@@ -13,45 +13,45 @@ import (
 
 func TestList(t *testing.T) {
 	type args struct {
-		user *gorsk.AuthUser
+		user *eventers.AuthUser
 	}
 	cases := []struct {
 		name     string
 		args     args
-		wantData *gorsk.ListQuery
+		wantData *eventers.ListQuery
 		wantErr  error
 	}{
 		{
 			name: "Super admin user",
-			args: args{user: &gorsk.AuthUser{
-				Role: gorsk.SuperAdminRole,
+			args: args{user: &eventers.AuthUser{
+				Role: eventers.SuperAdminRole,
 			}},
 		},
 		{
 			name: "Company admin user",
-			args: args{user: &gorsk.AuthUser{
-				Role:      gorsk.CompanyAdminRole,
+			args: args{user: &eventers.AuthUser{
+				Role:      eventers.CompanyAdminRole,
 				CompanyID: 1,
 			}},
-			wantData: &gorsk.ListQuery{
+			wantData: &eventers.ListQuery{
 				Query: "company_id = ?",
 				ID:    1},
 		},
 		{
 			name: "Location admin user",
-			args: args{user: &gorsk.AuthUser{
-				Role:       gorsk.LocationAdminRole,
+			args: args{user: &eventers.AuthUser{
+				Role:       eventers.LocationAdminRole,
 				CompanyID:  1,
 				LocationID: 2,
 			}},
-			wantData: &gorsk.ListQuery{
+			wantData: &eventers.ListQuery{
 				Query: "location_id = ?",
 				ID:    2},
 		},
 		{
 			name: "Normal user",
-			args: args{user: &gorsk.AuthUser{
-				Role: gorsk.UserRole,
+			args: args{user: &eventers.AuthUser{
+				Role: eventers.UserRole,
 			}},
 			wantErr: echo.ErrForbidden,
 		},

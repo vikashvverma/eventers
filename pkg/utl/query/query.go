@@ -6,14 +6,14 @@ import (
 )
 
 // List prepares data for list queries
-func List(u *gorsk.AuthUser) (*gorsk.ListQuery, error) {
+func List(u *eventers.AuthUser) (*eventers.ListQuery, error) {
 	switch true {
-	case u.Role <= gorsk.AdminRole: // user is SuperAdmin or Admin
+	case u.Role <= eventers.AdminRole: // user is SuperAdmin or Admin
 		return nil, nil
-	case u.Role == gorsk.CompanyAdminRole:
-		return &gorsk.ListQuery{Query: "company_id = ?", ID: u.CompanyID}, nil
-	case u.Role == gorsk.LocationAdminRole:
-		return &gorsk.ListQuery{Query: "location_id = ?", ID: u.LocationID}, nil
+	case u.Role == eventers.CompanyAdminRole:
+		return &eventers.ListQuery{Query: "company_id = ?", ID: u.CompanyID}, nil
+	case u.Role == eventers.LocationAdminRole:
+		return &eventers.ListQuery{Query: "location_id = ?", ID: u.LocationID}, nil
 	default:
 		return nil, echo.ErrForbidden
 	}

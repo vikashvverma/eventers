@@ -6,10 +6,10 @@ import (
 
 // JWT mock
 type JWT struct {
-	GenerateTokenFn func(*gorsk.User) (string, string, error)
+	GenerateTokenFn func(*eventers.User) (string, string, error)
 }
 
 // GenerateToken mock
-func (j *JWT) GenerateToken(u *gorsk.User) (string, string, error) {
+func (j *JWT) GenerateToken(u *eventers.User) (string, string, error) {
 	return j.GenerateTokenFn(u)
 }

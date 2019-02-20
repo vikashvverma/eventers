@@ -38,8 +38,8 @@ type Password struct {
 
 // UserDB represents user repository interface
 type UserDB interface {
-	View(orm.DB, int) (*gorsk.User, error)
-	Update(orm.DB, *gorsk.User) error
+	View(orm.DB, int) (*eventers.User, error)
+	Update(orm.DB, *eventers.User) error
 }
 
 // Securer represents security interface
