@@ -3,10 +3,10 @@ package user_test
 import (
 	"testing"
 
-	"github.com/vikashvverma/gorsk/pkg/api/user"
-	"github.com/vikashvverma/gorsk/pkg/utl/mock"
-	"github.com/vikashvverma/gorsk/pkg/utl/mock/mockdb"
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/api/user"
+	"github.com/vikashvverma/eventers/pkg/utl/mock"
+	"github.com/vikashvverma/eventers/pkg/utl/mock/mockdb"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
 
 	"github.com/go-pg/pg/orm"
 	"github.com/labstack/echo"

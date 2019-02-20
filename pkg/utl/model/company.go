@@ -1,4 +1,4 @@
-package gorsk
+package eventers
 
 // Company represents company model
 type Company struct {

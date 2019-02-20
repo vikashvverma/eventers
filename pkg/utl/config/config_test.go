@@ -3,7 +3,7 @@ package config_test
 import (
 	"testing"
 
-	"github.com/vikashvverma/gorsk/pkg/utl/config"
+	"github.com/vikashvverma/eventers/pkg/utl/config"
 	"github.com/stretchr/testify/assert"
 )
 

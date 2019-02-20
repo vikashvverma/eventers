@@ -1,4 +1,4 @@
-package gorsk
+package eventers
 
 import (
 	"github.com/labstack/echo"

@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/labstack/echo"
-	"github.com/vikashvverma/gorsk/pkg/api/auth"
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/api/auth"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
 )
 
 // New creates new auth logging service

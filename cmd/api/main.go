@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 
-	"github.com/vikashvverma/gorsk/pkg/api"
+	"github.com/vikashvverma/eventers/pkg/api"
 
-	"github.com/vikashvverma/gorsk/pkg/utl/config"
+	"github.com/vikashvverma/eventers/pkg/utl/config"
 )
 
 func main() {

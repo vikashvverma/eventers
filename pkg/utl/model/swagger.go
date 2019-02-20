@@ -1,4 +1,4 @@
-package gorsk
+package eventers
 
 // Success response
 // swagger:response ok

@@ -1,4 +1,4 @@
-package gorsk
+package eventers
 
 // AccessRole represents access role type
 type AccessRole int

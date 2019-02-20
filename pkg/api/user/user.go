@@ -3,9 +3,9 @@ package user
 
 import (
 	"github.com/labstack/echo"
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
-	"github.com/vikashvverma/gorsk/pkg/utl/query"
-	"github.com/vikashvverma/gorsk/pkg/utl/structs"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/utl/query"
+	"github.com/vikashvverma/eventers/pkg/utl/structs"
 )
 
 // Create creates a new user account

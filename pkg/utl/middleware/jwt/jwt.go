@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
 
 	"github.com/labstack/echo"
 

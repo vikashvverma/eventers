@@ -3,10 +3,10 @@ package rbac_test
 import (
 	"testing"
 
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
 
-	"github.com/vikashvverma/gorsk/pkg/utl/mock"
-	"github.com/vikashvverma/gorsk/pkg/utl/rbac"
+	"github.com/vikashvverma/eventers/pkg/utl/mock"
+	"github.com/vikashvverma/eventers/pkg/utl/rbac"
 
 	"github.com/labstack/echo"
 

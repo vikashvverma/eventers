@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/labstack/echo"
-	"github.com/vikashvverma/gorsk/pkg/api/user"
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/api/user"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
 )
 
 // New creates new user logging service

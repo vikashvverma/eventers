@@ -10,13 +10,13 @@ import (
 
 	"github.com/labstack/echo"
 
-	"github.com/vikashvverma/gorsk/pkg/api/auth"
-	"github.com/vikashvverma/gorsk/pkg/api/auth/transport"
-	"github.com/vikashvverma/gorsk/pkg/utl/middleware/jwt"
-	"github.com/vikashvverma/gorsk/pkg/utl/mock"
-	"github.com/vikashvverma/gorsk/pkg/utl/mock/mockdb"
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
-	"github.com/vikashvverma/gorsk/pkg/utl/server"
+	"github.com/vikashvverma/eventers/pkg/api/auth"
+	"github.com/vikashvverma/eventers/pkg/api/auth/transport"
+	"github.com/vikashvverma/eventers/pkg/utl/middleware/jwt"
+	"github.com/vikashvverma/eventers/pkg/utl/mock"
+	"github.com/vikashvverma/eventers/pkg/utl/mock/mockdb"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/utl/server"
 
 	"github.com/go-pg/pg/orm"
 	"github.com/stretchr/testify/assert"

@@ -5,8 +5,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
-	"github.com/vikashvverma/gorsk/pkg/utl/secure"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/utl/secure"
 
 	"github.com/go-pg/pg"
 	"github.com/go-pg/pg/orm"

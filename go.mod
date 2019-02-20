@@ -1,4 +1,4 @@
-module github.com/vikashvverma/gorsk
+module github.com/vikashvverma/eventers
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

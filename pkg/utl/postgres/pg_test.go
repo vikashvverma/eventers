@@ -4,11 +4,11 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/vikashvverma/gorsk/pkg/utl/postgres"
+	"github.com/vikashvverma/eventers/pkg/utl/postgres"
 
 	"github.com/fortytw2/dockertest"
 )

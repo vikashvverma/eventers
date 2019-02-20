@@ -1,4 +1,4 @@
-package gorsk
+package eventers
 
 // Pagination constants
 const (

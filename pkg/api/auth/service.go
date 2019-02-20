@@ -4,8 +4,8 @@ import (
 	"github.com/go-pg/pg"
 	"github.com/go-pg/pg/orm"
 	"github.com/labstack/echo"
-	"github.com/vikashvverma/gorsk/pkg/api/auth/platform/pgsql"
-	"github.com/vikashvverma/gorsk/pkg/utl/model"
+	"github.com/vikashvverma/eventers/pkg/api/auth/platform/pgsql"
+	"github.com/vikashvverma/eventers/pkg/utl/model"
 )
 
 // New creates new iam service
