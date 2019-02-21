@@ -2,6 +2,7 @@ database:
   log_queries: true
   timeout_seconds: 5
   psn: postgres://biadpozi:3_Czbl7jSjkUEWk--VP8QXMke-mFnczq@horton.elephantsql.com:5432/biadpozi
+  sserver: server=eventers.database.windows.net;user id=eventers;password=C0mplexPwd;port=1433;database=Eventers;
 
 server:
   port: :8080
