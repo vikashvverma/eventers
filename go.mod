@@ -1,7 +1,8 @@
 module github.com/vikashvverma/eventers
 
 require (
-	github.com/davecgh/go-spew v1.1.1 // indirect
+	cloud.google.com/go v0.36.0 // indirect
+	github.com/denisenkom/go-mssqldb v0.0.0-20190204142019-df6d76eb9289
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fortytw2/dockertest v0.0.0-20171126212657-a73397bdeff4
 	github.com/go-pg/pg v6.15.1+incompatible
@@ -17,8 +18,7 @@ require (
 	github.com/rs/zerolog v1.10.3
 	github.com/stretchr/testify v1.2.2
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	golang.org/x/crypto v0.0.0-20181029103014-dab2b1051b5d
-	golang.org/x/sys v0.0.0-20181026203630-95b1ffbd15a5 // indirect
+	golang.org/x/crypto v0.0.0-20181030102418-4d3f4d9ffa16
 	gopkg.in/yaml.v2 v2.2.1
 	mellium.im/sasl v0.2.1 // indirect
 )
