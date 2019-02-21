@@ -33,12 +33,17 @@ package api
 
 import (
 	"crypto/sha1"
+	"database/sql"
+	"log"
 
 	"github.com/vikashvverma/eventers/pkg/utl/zlog"
 
 	"github.com/vikashvverma/eventers/pkg/api/auth"
 	al "github.com/vikashvverma/eventers/pkg/api/auth/logging"
 	at "github.com/vikashvverma/eventers/pkg/api/auth/transport"
+	"github.com/vikashvverma/eventers/pkg/api/event"
+	el "github.com/vikashvverma/eventers/pkg/api/event/logging"
+	ev "github.com/vikashvverma/eventers/pkg/api/event/transport"
 	"github.com/vikashvverma/eventers/pkg/api/password"
 	pl "github.com/vikashvverma/eventers/pkg/api/password/logging"
 	pt "github.com/vikashvverma/eventers/pkg/api/password/transport"
@@ -61,6 +66,12 @@ func Start(cfg *config.Configuration) error {
 		return err
 	}
 
+	// Create connection pool
+	sqlDB, err := sql.Open("sqlserver", cfg.DB.SQLServer)
+	if err != nil {
+		log.Fatal("Error creating connection pool: ", err.Error())
+	}
+
 	sec := secure.New(cfg.App.MinPasswordStr, sha1.New())
 	rbac := rbac.New()
 	jwt := jwt.New(cfg.JWT.Secret, cfg.JWT.SigningAlgorithm, cfg.JWT.Duration)
@@ -72,10 +83,11 @@ func Start(cfg *config.Configuration) error {
 	at.NewHTTP(al.New(auth.Initialize(db, jwt, sec, rbac), log), e, jwt.MWFunc())
 
 	v1 := e.Group("/v1")
-	v1.Use(jwt.MWFunc())
+	//v1.Use(jwt.MWFunc())
 
 	ut.NewHTTP(ul.New(user.Initialize(db, rbac, sec), log), v1)
 	pt.NewHTTP(pl.New(password.Initialize(db, rbac, sec), log), v1)
+	ev.NewHTTP(el.New(event.Initialize(sqlDB, sec), log), v1)
 
 	server.Start(e, &server.Config{
 		Port:                cfg.Server.Port,
