@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	yaml "gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v2"
 )
 
 // Load returns Configuration struct
@@ -31,6 +31,7 @@ type Configuration struct {
 // Database holds data necessery for database configuration
 type Database struct {
 	PSN        string `yaml:"psn,omitempty"`
+	SQLServer  string    `yaml:"sserver,omitempty"`
 	LogQueries bool   `yaml:"log_queries,omitempty"`
 	Timeout    int    `yaml:"timeout_seconds,omitempty"`
 }

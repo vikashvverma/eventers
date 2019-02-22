@@ -5,7 +5,7 @@ import (
 	"github.com/vikashvverma/eventers/pkg/utl/model"
 )
 
-// New creates new password logging service
+// New creates new event logging service
 func New(svc event.Service, logger eventers.Logger) *LogService {
 	return &LogService{
 		Service: svc,
@@ -13,26 +13,8 @@ func New(svc event.Service, logger eventers.Logger) *LogService {
 	}
 }
 
-// LogService represents password logging service
+// LogService represents event logging service
 type LogService struct {
 	event.Service
 	logger eventers.Logger
 }
-
-//
-//const name = "password"
-//
-//// Change logging
-//func (ls *LogService) Change(c echo.Context, id int, oldPass, newPass string) (err error) {
-//	defer func(begin time.Time) {
-//		ls.logger.Log(
-//			c,
-//			name, "Change password request", err,
-//			map[string]interface{}{
-//				"req":  id,
-//				"took": time.Since(begin),
-//			},
-//		)
-//	}(time.Now())
-//	return ls.Service.Change(c, id, oldPass, newPass)
-//}

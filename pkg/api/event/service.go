@@ -11,11 +11,8 @@ import (
 
 // Service represents event application interface
 type Service interface {
-	Create(echo.Context, eventers.Event) (int64, error)
-	List(echo.Context, *eventers.Pagination) ([]eventers.Event, error)
+	Create(echo.Context, eventers.Event) (*eventers.Event, error)
 	View(echo.Context, int) (*eventers.Event, error)
-	Delete(echo.Context, int) error
-	Update(echo.Context, *Update) (*eventers.Event, error)
 }
 
 // New creates new event application service
@@ -42,9 +39,6 @@ type Securer interface {
 
 // UDB represents event repository interface
 type UDB interface {
-	Create(*sql.DB, eventers.Event) (int64, error)
+	Create(*sql.DB, eventers.Event) (*eventers.Event, error)
 	View(*sql.DB, int) (*eventers.Event, error)
-	List(*sql.DB, *eventers.Pagination) ([]eventers.Event, error)
-	Update(*sql.DB, *eventers.Event) error
-	Delete(*sql.DB, *eventers.Event) error
 }

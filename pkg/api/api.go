@@ -36,6 +36,8 @@ import (
 	"database/sql"
 	"log"
 
+
+	_ "github.com/denisenkom/go-mssqldb"
 	"github.com/vikashvverma/eventers/pkg/utl/zlog"
 
 	"github.com/vikashvverma/eventers/pkg/api/auth"
