@@ -36,7 +36,6 @@ import (
 	"database/sql"
 	"log"
 
-
 	_ "github.com/denisenkom/go-mssqldb"
 	"github.com/vikashvverma/eventers/pkg/utl/zlog"
 
@@ -52,7 +51,6 @@ import (
 	"github.com/vikashvverma/eventers/pkg/api/user"
 	ul "github.com/vikashvverma/eventers/pkg/api/user/logging"
 	ut "github.com/vikashvverma/eventers/pkg/api/user/transport"
-
 	"github.com/vikashvverma/eventers/pkg/utl/config"
 	"github.com/vikashvverma/eventers/pkg/utl/middleware/jwt"
 	"github.com/vikashvverma/eventers/pkg/utl/postgres"
