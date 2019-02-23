@@ -53,9 +53,9 @@ func NewHTTP(svc event.Service, er *echo.Group) {
 // Event create request
 // swagger:model eventCreate
 type createReq struct {
-	Name     string    `json:"name" validate:"required,min=3"`
-	Date     time.Time `json:"date" validate:"required"`
-	Location string    `json:"location" validate:"required,min=3"`
+	Name     string     `json:"name" validate:"required,min=3"`
+	Date     *time.Time `json:"date" validate:"required"`
+	Location string     `json:"location" validate:"required,min=3"`
 }
 
 func (h *HTTP) create(c echo.Context) error {

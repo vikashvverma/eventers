@@ -3,8 +3,8 @@ package structs_test
 import (
 	"testing"
 
-	"github.com/vikashvverma/eventers/pkg/utl/structs"
 	"github.com/stretchr/testify/assert"
+	"github.com/vikashvverma/eventers/pkg/utl/structs"
 )
 
 type carID int64

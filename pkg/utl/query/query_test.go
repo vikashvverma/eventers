@@ -7,8 +7,8 @@ import (
 
 	"github.com/labstack/echo"
 
-	"github.com/vikashvverma/eventers/pkg/utl/query"
 	"github.com/stretchr/testify/assert"
+	"github.com/vikashvverma/eventers/pkg/utl/query"
 )
 
 func TestList(t *testing.T) {

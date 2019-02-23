@@ -5,9 +5,9 @@ import (
 
 	"github.com/vikashvverma/eventers/pkg/utl/model"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/vikashvverma/eventers/pkg/api/password/platform/pgsql"
 	"github.com/vikashvverma/eventers/pkg/utl/mock"
-	"github.com/stretchr/testify/assert"
 )
 
 func TestView(t *testing.T) {

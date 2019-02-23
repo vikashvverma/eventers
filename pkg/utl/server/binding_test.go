@@ -8,8 +8,8 @@ import (
 
 	"github.com/go-playground/validator"
 	"github.com/labstack/echo"
-	"github.com/vikashvverma/eventers/pkg/utl/server"
 	"github.com/stretchr/testify/assert"
+	"github.com/vikashvverma/eventers/pkg/utl/server"
 )
 
 type Req struct {

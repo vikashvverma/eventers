@@ -151,8 +151,8 @@ type createReq struct {
 	PasswordConfirm string `json:"password_confirm" validate:"required"`
 	Email           string `json:"email" validate:"required,email"`
 
-	CompanyID  int              `json:"company_id" validate:"required"`
-	LocationID int              `json:"location_id" validate:"required"`
+	CompanyID  int                 `json:"company_id" validate:"required"`
+	LocationID int                 `json:"location_id" validate:"required"`
 	RoleID     eventers.AccessRole `json:"role_id" validate:"required"`
 }
 
@@ -192,7 +192,7 @@ func (h *HTTP) create(c echo.Context) error {
 
 type listResponse struct {
 	Users []eventers.User `json:"users"`
-	Page  int          `json:"page"`
+	Page  int             `json:"page"`
 }
 
 func (h *HTTP) list(c echo.Context) error {

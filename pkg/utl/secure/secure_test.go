@@ -4,8 +4,8 @@ import (
 	"crypto/sha1"
 	"testing"
 
-	"github.com/vikashvverma/eventers/pkg/utl/secure"
 	"github.com/stretchr/testify/assert"
+	"github.com/vikashvverma/eventers/pkg/utl/secure"
 )
 
 func TestPassword(t *testing.T) {
